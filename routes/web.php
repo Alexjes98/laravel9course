@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/escribeme',function () {
+    return "Contacto";
+})->name('contacto');
+
 Route::get('/custom', function () {
     $msg = "Mensaje desde el servidor";
     $num = 15;
