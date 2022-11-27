@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/custom', function () {
+    $msg = "Mensaje desde el servidor";
+    $num = 15;
+    $data = ['msg' => $msg,'num' => $num];
+    return view('custom',['data' => $data]);    
+});
