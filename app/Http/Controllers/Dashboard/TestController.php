@@ -14,7 +14,9 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view("dashboard.test.index",['name'=>'name']);
+        $post = 'name';
+        $data = [1,2,3,4,5];
+        return view("dashboard.test.index",compact('post','data'));
     }
 
     /**
